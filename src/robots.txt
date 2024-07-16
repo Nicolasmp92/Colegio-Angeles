@@ -1,0 +1,75 @@
+User-agent: *
+Disallow:
+
+Disallow: /cgi-bin/
+Disallow: /*.sql$
+
+# Bloqueo de las URL dinamicas
+Disallow: /*?
+
+# Bloqueo de busquedas
+Disallow: /?s=
+Disallow: /search
+
+# Bloqueo de trackbacks
+Disallow: /trackback
+Disallow: /*trackback
+Disallow: /*trackback*
+Disallow: /*/trackback
+
+# Permitir Google Webmaster Tool
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# wordpress
+Disallow: /xmlrpc.php
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+
+Disallow: /*/xmlrpc.php
+Disallow: /*/wp-admin/
+Disallow: /*/wp-includes/
+Disallow: /*/wp-content/plugins/
+Disallow: /*/wp-content/cache/
+Disallow: /*/wp-content/themes/
+
+# joomla
+Disallow: /administrator/
+Disallow: /bin/
+Disallow: /cache/
+Disallow: /cli/
+Disallow: /components/
+Disallow: /installation/
+Disallow: /language/
+Disallow: /layouts/
+Disallow: /libraries/
+Disallow: /logs/
+Disallow: /media/
+Disallow: /modules/
+Disallow: /plugins/
+Disallow: /templates/
+Disallow: /tmp/
+
+Disallow: /*/administrator/
+Disallow: /*/bin/
+Disallow: /*/cache/
+Disallow: /*/cli/
+Disallow: /*/components/
+Disallow: /*/images/
+Disallow: /*/includes/
+Disallow: /*/installation/
+Disallow: /*/language/
+Disallow: /*/layouts/
+Disallow: /*/libraries/
+Disallow: /*/logs/
+Disallow: /*/media/
+Disallow: /*/modules/
+Disallow: /*/plugins/
+Disallow: /*/templates/
+Disallow: /*/tmp/
+
+Sitemap: https://www.colegioangeles.cl/sitemap.xml

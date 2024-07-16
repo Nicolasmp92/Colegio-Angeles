@@ -1,0 +1,73 @@
+
+
+<div class="container titulo">
+  <div class="row align-items-center">
+
+    <div class="col-2 mt-3">
+      <img class="float-start" style=" width:10rem; height: 10rem;" src="../../../assets/angeles.jpg" alt="Logo Colegio ángeles">
+    </div>
+
+    <div class="row col-6 justify-content-start nombreColegio">
+      <h1 class="text-center"> ESCUELA ESPECIAL ÁNGELES</h1>
+    </div>
+
+    <div class="col-4 justify-content-end">
+        <p class="mb-0 fs-5"> Teléfonos 722452025/+569 4231 7731 </p>
+        <h1 class="mt-0 text-info text-decoration-underline"> Educación Gratuita </h1>
+    </div>
+
+  </div>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-info bg-info mt-2 mb-3" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+      aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon "></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center mb-2" id="navbarsExample08">
+        <ul class="navbar-nav  text-center  barraWeb" ngbNav [roles]="false" id="button" aria-describedby="tooltip">
+          <li class="nav-item" ngbNavItem class="menu" *ngFor="let menu of menus" routerLinkActive="active">
+           <a class="d-inline nav-link text-light fs-4 me-5 align-middle " ngbNavLink [routerLink]=menu.url routerLinkActive="router-link-active"
+           (mouseover)="reproducir(menu.texto)" (mouseout)="pausar()" (click)="pausar()">{{menu.texto}} </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+<!--
+  <div class="mt-5" id="tooltip" role="tooltip">
+    {{pop}}
+    <div id="arrow" data-popper-arrow></div>
+  </div> -->
+
+
+
+
+<!--
+<div class="container">
+    <ul ngbNav [roles]="false" class="nav color-primary justify-content-center barraWeb">
+
+      <li ngbNavItem class="menu" *ngFor="let menu of menus">
+        <a ngbNavLink [routerLink]=menu.url routerLinkActive="router-link-active"
+        (mouseover)="reproducir(menu.texto)" (mouseout)="pausar()" (click)="pausar()">{{menu.texto}}</a>
+      </li>
+      <a class="volumen" *ngIf="volumen" target="_blank" (click)="mute()"><i class="bi bi-volume-up"></i></a>
+      <a class="volumen" *ngIf="!volumen" target="_blank" (click)="mute()"><i class="bi bi-volume-mute"></i></a>
+    </ul>
+
+    <ul ngbNav [roles]="false" class="nav color-primary barraMovil">
+      <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="botonBarra" ngbDropdownToggle><i class="bi bi-justify"></i></a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem *ngFor="let menu of menus"
+          (mouseover)="reproducir(menu.texto)" (mouseout)="pausar()" (click)="pausar()"
+          [routerLink]=menu.url routerLinkActive="router-link-active">{{menu.texto}}</button>
+        </div>
+      </li>
+    </ul>
+</div> -->

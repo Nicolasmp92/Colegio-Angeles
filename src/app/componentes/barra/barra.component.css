@@ -1,0 +1,15 @@
+#tooltip {
+  /* ... */
+  display: none;
+}
+
+#tooltip[data-show] {
+  display: block;
+}
+
+
+@media screen and (max-width: 982px) {
+    .nombreColegio{
+        visibility: collapse;
+    }
+}

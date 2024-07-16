@@ -1,0 +1,86 @@
+<div class="container">
+<div class="row contenido justify-content-md-center">
+  <h1 class="text-center fw-bold pb-5"> Contáctanos</h1>
+      <div class="col-lg-6">
+        <div class="card border-info  mb-3">
+            <div class="card-header bg-info ">Avenida #701, Coltauco, O'Higgins</div>
+            <div class="card-body">
+                <mapa-cole></mapa-cole>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-info">
+            <div class="card-header bg-info">Información</div>
+            <div class="card-body">
+                <h5 class="card-title pb-2">Horarios</h5>
+                <p class="card-text pb-2">Lunes a Viernes de 08:00 a 17:00</p>
+                <h5 class="card-title pb-2">Teléfonos</h5>
+                <p class="card-text pb-2">Celular: +569 4231 7731</p>
+                <p class="card-text pb-2">Fijo: 722452025</p>
+                <h5 class="card-title pb-2">Correos</h5>
+                <p class="card-text pb-2">contacto@colegioangeles.cl</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-12 contacto">
+        <div class="card">
+            <div class="card-header bg-info">Contáctanos</div>
+            <div class="card-body border-info">
+                <form class="row g-3 needs-validation" [formGroup]="form" method="post" (ngSubmit)="onSubmit()" novalidate >
+                    <div class="col-md-6">
+                        <input type="text" class="form-control text-info" id="validationCustom01" placeholder="Nombre *"
+                        required autocomplete="off" [formControl]="name">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                          <span class="input-group-text" id="telefono">+56</span>
+                          <input type="text" class="form-control text-info" id="validationTelefono"  aria-describedby="telefono"
+                          placeholder="Teléfono/Celular *" required autocomplete="off" (keyup)="validarPhone()"
+                          minlength="9" maxlength="9" (focusout)="validarPhone()" [formControl]="telefono" name="telefono">
+                          <div class="invalid-feedback">
+                            El número debe tener 9 digitos
+                        </div>
+                        </div>
+                      </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control text-info" id="validationCustom02" placeholder="Asunto *"
+                        required autocomplete="off" [formControl]="empresa" >
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control text-info" id="validationCustom03" placeholder="Correo Electrónico *"
+                        required autocomplete="off"  [formControl]="email">
+                        <div class="invalid-feedback">
+                            formato del Correo algo@algo.cl
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="validationTextarea" class="form-label">Mensaje</label>
+                        <textarea class="form-control text-info" id="validationTextarea" placeholder="Mensaje*" required
+                        [formControl]="message"></textarea>
+                        <div class="invalid-feedback">
+                          Debe ingresar un mensaje para realizar el contacto.
+                        </div>
+                      </div>
+
+                    <div class="col-12 text-center">
+                      <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-info btn-lg fs-3 text-light" type="submit" (click)="validate($event)" >Enviar</button>
+                      </div>
+                      </div>
+                </form>
+            </div>
+          </div>
+    </div>
+    <app-toasts aria-live="polite" aria-atomic="true" class="contacto"></app-toasts>
+</div>
+
+<div class="container load" *ngIf="cargardo">
+    <div class="cargando" role="status">
+        <span class="sr-only" id="loading"></span>
+      </div>
+
+</div>
+</div>

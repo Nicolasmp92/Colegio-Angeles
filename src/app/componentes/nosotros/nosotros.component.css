@@ -1,0 +1,28 @@
+@import '~animate.css/animate.min';
+
+.nos{
+  animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+
+/* .nosotros{
+    background-image: url(../../../assets/01.jpg);
+    margin-top: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.nos{
+    background-color: rgba(119, 182, 230, 0.8);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.blockquote-footer{
+    color: black;
+    text-align: justify;
+    margin-left: 20px;
+} */

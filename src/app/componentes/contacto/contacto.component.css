@@ -1,0 +1,16 @@
+@import 'animate.css/animate.min';
+
+.cont{
+  animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.btn-primary{
+    color: #0E100F;
+    background-color: #77B6E6;
+    border-color: #77B6E6;
+}
+
+.contacto{
+  margin-top: 10px;
+}

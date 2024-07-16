@@ -1,0 +1,165 @@
+<!-- <hr class="border border-info border-1 ms-5 me-5 mb-5 "> -->
+
+<section id="moda" class="mt-5 ini">
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-5">
+          <h1>Colegio Especial Ángeles</h1>
+          <div class="texto">
+            <p>
+              Colegio Especial Ángeles, es un proyecto que nace en marzo del año 2013. Atiende alumnos y alumnas con Necesidades Educativas Especiales derivadas
+               de una discapacidad intelectual, parálisis cerebral, síndrome de down, trastornos de la comunicación.
+            </p>
+            <p>
+              Su misión es entregar educación y formación integral de alta calidad, permitiendo la superación personal y entregando herramientas que favorezcan un
+              futuro desempeño familiar, social y/o laboral...
+            </p>
+            <p *ngIf="vermas">
+              Es una escuela gratuita que atiende niños desde 6 a 25 años de edad, de la comuna de Coltauco y sus alrededores. Cuenta con un equipo multidisciplinario formado por Educadoras Diferenciales, Psicopedagoga, Kinesióloga, Fonoaudióloga, Psicólogas, Asistentes de Aula, Monitor de Taller Laboral y Artesanía.
+            </p>
+            <p *ngIf="vermas">
+              A partir de marzo del año 2014, se abre una nueva alternativa educativa para adultos mayores de 27 años, cuya finalidad es entregar herramientas para la formación laboral, que les permita insertarse gradual y efectivamente en la sociedad.
+            </p>
+            <p *ngIf="vermas">
+              Actualmente la escuela cuenta con Taller de Danza, Mosaico, Jardinería y Horticultura, como parte de la formación laboral y extra curricular de los alumnos.
+            </p>
+            <button *ngIf="!vermas" (click)="vermas=!vermas" class="btn btn-info text-light  fw-bold fs-5 mb-3"><i class="bi bi-plus"></i> Leer más</button>
+            <button *ngIf="vermas" (click)="vermas=!vermas" class="btn btn-info text-light  fw-bold fs-5"><i class="bi bi-dash"></i> Leer menos</button>
+          </div>
+
+      </div>
+
+      <!-- MINI GALERIA -->
+      <div class="col-lg-7 moda-item">
+        <a href="" class="moda-link rounded border border-warning" data-bs-toggle="modal" data-bs-target="#modal1">
+          <div class="moda-hover">
+            <div class="moda-hover-content">
+              <i class="bi bi-plus fs-1 fw-bold"> Ver Más</i>
+            </div>
+        </div>
+        <img src="../../../assets/00.jpg" class="img-fluid rounded" alt="...">
+        </a>
+      </div>
+
+
+    </div>
+</div>
+
+<div class="container mt-5 text-center">
+  <div class="col-lg-12">
+    <!-- <h1 class="text-aura fw-bold"> Matriculas Abiertas</h1> -->
+  </div>
+  <div class="col-lg-12 pt-2">
+    <div class="d-grid gap-2 ">
+    <a [routerLink]="['matriculas']" href="#" class="btn btn-info btn-lg text-light fw-bold shadow-lg p-3 mb-5 bg-body-tertiary rounded fs-1 matricula"> Matrículas Aquí <i class="bi bi-hand-index-thumb fs-2"></i></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container my-5">
+  <h1 class=" text-center fw-bold py-5"> Nuestra Propuesta Educativa </h1>
+
+  <div class="row">
+      <div class="col-lg-4">
+          <div class="card border-info mb-3">
+            <img src="../../../assets/galeria/01.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Educación Básica Especial</h5>
+              <p class="card-text pb-3 texto">Trabajamos con niños, niñas y
+                jóvenes de 1ro a 8vo básico, con
+                discapacidad intelectual, autismo,
+                síndrome de Down, parálisis
+                cerebral, entre otros.</p>
+                <br>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-info mb-3">
+          <img src="../../../assets/galeria/04.jpg" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h5 class="card-title fw-bold ">Equipo Multidisciplinario</h5>
+            <p class="card-text pb-1 texto">Contamos con educadoras
+              diferenciales, profesoras de
+              enseñanza básica, profesor de
+              educación física, técnicos en
+              educación especial, fonoaudióloga,
+              psicóloga, kinesióloga y profesores
+              monitores de talleres.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card border-info mb-3">
+        <img src="../../../assets/galeria/14.JPG" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Talleres Polivalentes</h5>
+          <p class="card-text pb-3 texto">Realizamos talleres polivalentes
+            como trabajo en madera, mosaico,
+            huerto y jardinería, aromaterapia,
+            entre otros.</p>
+            <br>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<app-contacto></app-contacto>
+
+</section>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Mini Galeria</h1>
+        <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Cuerpo de la modalñ -->
+      <div class="modal-body">
+
+        <!-- Carrusel de la galeria -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../../assets/00.jpg" class="d-block w-100 h-100 img-fluid" alt="...">
+            </div>
+            <div *ngFor="let imagen of galeria" class="carousel-item" >
+              <img [src]=imagen.url class="d-block w-100 h-100 img-fluid" alt="...">
+            </div>
+
+
+          </div>
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button> -->
+        </div>
+
+      </div>
+
+      <div class="modal-footer ">
+        <div class="input-group input-group-sm justify-content-between">
+          <button class="btn btn-info ms-3 "  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"> <i class="text-light bi bi-chevron-double-left"></i> </button>
+          <button class="btn btn-info ms-3 "  data-bs-target="#carouselExampleIndicators" data-bs-slide="next"> <i class="text-light bi bi-chevron-double-right"></i> </button>
+        </div>
+        <!-- <button type="button" class="btn btn-warning  text-light" data-bs-dismiss="modal"><i class=" bi bi-x"></i>  Cerrar</button> -->
+      </div>
+
+    </div>
+  </div>
+</div>

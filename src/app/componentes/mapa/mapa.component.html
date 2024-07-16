@@ -1,0 +1,15 @@
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="true">
+  <agm-marker [latitude]="lat" [longitude]="lng" [label]="label" >
+      <agm-info-window [isOpen]="false">
+            <H6>Colegio Especial Ángeles</H6>
+            <span>Avenida #701, Coltauco, O'Higgins</span>
+            <br>
+            <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=-34.289125,-71.084548&amp;z=18&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=apiv3&amp;cid=15607932556177563634" tabindex="0"> <span>Ver en Google Maps</span> </a>
+      </agm-info-window>
+  </agm-marker>
+</agm-map>

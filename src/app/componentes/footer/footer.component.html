@@ -1,0 +1,48 @@
+<div class="b-example-divider"></div>
+
+
+<div class="bg-info">
+  <div class="container pt-4 pb-2">
+    <div class=" row justify-content-md-center">
+
+      <div class="col-lg-3 text-center">
+          <h4 class="text-aura fw-bold  fst-italic"> Colegio Ángeles </h4>
+            <div class=" nav-pills me-3" *ngFor="let nav of listanav">
+              <ul class="nav flex-column">
+              <li class="nav-item mb-2" id="v-pills-home-tab">
+                  <a class="nav-link p-0  footerlink text-light fs-5" [href]=nav.url>{{nav.texto}}</a>
+              </li>
+              </ul>
+            </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <h4 class="text-aura fw-bold fst-italic">Contáctanos</h4>
+        <ul class="nav flex-column " *ngFor="let contacto of litstaContac">
+          <li class="nav-item mb-2">
+              <a *ngIf="!contacto.isLink" class="nav-link footerlink text-light fs-5">
+                  <i [class]="contacto.icono"></i>
+                  {{contacto.dato}}
+              </a>
+              <a *ngIf="contacto.isLink" class="nav-link footerlink text-light fs-5" [href]="contacto.link" target="_blank">
+                  <i [class]="contacto.icono"></i>
+                  {{contacto.dato}}
+              </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 text-center mb-3">
+        <h4 class="text-aura fw-bold fst-italic pb-4">Compartir Colegio Ángeles en:</h4>
+        <a *ngFor="let red of redes" class="redes text-light mx-3 fs-3" [href]="red.link" target="_blank"><i [class]="red.icono"></i></a>
+      </div>
+
+
+        <hr class="border text-aura">
+        <div class="text-center pb-2">
+          <h6 class="text-aura">Colegio Ángeles by <p class="fw-bold"> TECNOHOOT </p></h6>
+        </div>
+  </div>
+  </div>
+</div>
+

@@ -1,0 +1,139 @@
+<!-- <hr class="border border-muted border-3 opacity-75 ms-5 me-5 mb-5"> -->
+
+<div class="container text-muted mt-5 mat">
+  <div class="row">
+    <h1 class="text-center text-muted fw-bold mb-4">Matricúlate con nosotros</h1>
+
+
+
+
+    <div class="col-lg-12 px-5">
+      <div class="bg-light border rounded-3 px-5 pb-5 pt-5">
+        <form class="needs-validation" [formGroup]="form" method="post" (ngSubmit)="onSubmit()" novalidate>
+          <div class="imput-group">
+            <h5 class="text-center">Datos Apoderado</h5>
+            <hr>
+
+            <div class="row">
+              <div class="col-lg">
+                <label class="form-label">Rut</label>
+                <input class="form-control text-info" type="text" name="" id="" placeholder="12345678-9"
+                  [formControl]="rutApoderado" required>
+              </div>
+              <div class="col-lg">
+                <label class="form-label"> Nombre</label>
+                <input class="form-control text-info" type="text" name="" id="" placeholder="Ingrese su nombre"
+                  [formControl]="nombreApoderado" required>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg">
+                <label class="form-label">Apellido</label>
+                <input class="form-control text-info" type="text" name="" id="" placeholder="Ingrese su apellido"
+                  [formControl]="apellidoApoderado" required>
+              </div>
+              <div class="col-lg">
+                <label class="form-label" for="">Indique parentesco</label>
+                <select class="form-select" name="parentesco" id="" [formControl]="parentescoApoderado" required>
+                  <!-- se deben asignar valore. para la opcion con SELECTED no se debe espesificar ningun valor, ya que solo es visual-->
+                  <option selected value=""> Seleccione una opción...</option>
+                  <option value="Madre">Madre</option>
+                  <option value="Padre">Padre</option>
+                  <option value="o">otro (se debe especificar)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row mt-3" *ngIf="validarOtro()">
+              <div class="col"></div>
+              <div class="col-lg">
+                <label for="" class="form-label">Otro Especifique</label>
+                <input class="form-control text-info" type="text" placeholder="Espesifique Otro Parentesco" [formControl]="otroParentesco" required>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col-lg">
+                <label class="form-label" for=""> Número Teléfono</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="telefono">+56</span>
+                  <input class="form-control text-info" type="text" [formControl]="telefono" required
+                    (keyup)="validarPhone()" (focusout)="validarPhone()" name="telefono" minlength="9" maxlength="9">
+                </div>
+              </div>
+              <div class="col-lg">
+                <label class="form-label" for=""> Correo electrónico</label>
+                <input class="form-control text-info" type="email" name="" id="" [formControl]="email" required>
+                <div class="form-text"> Nunca compartiremos su correo electrónico con nadie más.</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="bg-info text-light border rounded-3 px-5 pb-5 pt-5 mt-5">
+            <div class="imput-group">
+              <h5 class="text-center">Datos Alumno</h5>
+              <hr>
+              <div class="row">
+
+                <div class="col-lg">
+                  <label class="form-label" for=""> Rut Alumno</label>
+                  <input class="form-control text-info" type="text" name="" id="" placeholder="12345678-9"
+                    [formControl]="rutAlumno" required>
+                </div>
+                <div class="col-lg">
+                  <label class="form-label" for=""> Nombre</label>
+                  <input class="form-control text-info" type="text" name="" id="" placeholder="Ingrese Nombre"
+                    [formControl]="nombreAlumno" required>
+                </div>
+
+              </div>
+              <div class="row mt-3">
+
+                <div class="col-lg">
+                  <label class="form-label" for=""> Apellido</label>
+                  <input class="form-control text-info" type="text" name="" id="" placeholder="Ingrese Apellido"
+                    [formControl]="apellidoAlumno" required>
+                </div>
+                <div class="col-lg">
+                  <label class=" form-label" for=""> Fecha de Nacimiento</label>
+                  <input class="form-control text-info" type="date" name="" id="" [formControl]="fechaNacimientoAlumno"
+                    required>
+                </div>
+
+              </div>
+
+              <div class="col-lg mt-5 text-center">
+                <button class="btn btn-outline-warning btn-lg text-light " type="submit" (click)="validate($event)">
+                  Enviar mis datos para que me contacten</button>
+                  <app-toasts aria-live="polite" aria-atomic="true" class="contacto "></app-toasts>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-lg-1">
+                  <button class="btn btn-light "> <i class="fs-1 bi bi-info-circle"></i></button>
+                </div>
+                <div  class="col-lg float-start info">
+                  <h4> Si tienes dudas o consultas contáctate con nosotros al  +569 8470 6827 o escríbenos al correo
+                    <a href="mailto:contacto@colegioangeles.cl?subject=Cotización" class="link-warning correo"> contacto@colegioangeles.cl </a> </h4>
+                </div>
+                </div>
+
+
+
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container load" *ngIf="cargardo">
+  <div class="cargando" role="status">
+    <span class="sr-only" id="loading"></span>
+  </div>
+</div>
